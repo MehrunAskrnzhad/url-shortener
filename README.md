@@ -5,7 +5,11 @@ The URL Shortener API is a simple web service that allows you to shorten long UR
 
 - [Features](#features)
 - [Installation](#installation)
+   - [Local Setup](#local-setup)
+   - [Docker](#docker)
 - [Usage](#usage)
+   - [Shorten URL](#shorten-url)
+   - [Readirect To Original URL](#redirect-to-original-url)
 - [API Endpoints](#api-endpoints)
 - [Configuration](#configuration)
 - [Contributing](#contributing)
@@ -26,9 +30,10 @@ The URL Shortener API is a simple web service that allows you to shorten long UR
 
 - Python 3.6 or higher installed.
 - Flask library installed (`pip install Flask`).
+- Docker (optional, for running the application in a Docker container)
 
 ### Installation
-
+#### Local Setup
 1. Clone the repository:
 
    ```bash
@@ -50,6 +55,20 @@ The URL Shortener API is a simple web service that allows you to shorten long UR
    ```
 
 The URL Shortener service should now be running on http://localhost:5000.
+
+#### Docker
+To run the application in a Docker container, follow these steps:
+
+1. Build the Docker image:
+   ```shell
+   docker build -t url-shortener .
+   ```
+
+2. Run the Docker container:
+   ```shell
+   docker run -p 5000:5000 url-shortener
+   ```
+The application will be accessible at `http://localhost:5000`.
 
 ## Usage 
 ### Shorten URL
