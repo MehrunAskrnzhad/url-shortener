@@ -130,7 +130,7 @@ class URLShortener:
             shortcode = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length))
         return shortcode
 
-    def get_original_url(self, shortcode: str) -> str or None:
+    def get_original_url(self, shortcode: str) -> str | None:
         """
         Get the original URL associated with the given shortcode.
 
@@ -155,7 +155,7 @@ class URLShortener:
         """
         return url in self.data.values()
 
-    def get_shortened_url(self, url: str) -> str or None:
+    def get_shortened_url(self, url: str) -> str | None:
         """
         Get the shortened URL associated with the given original URL.
 
